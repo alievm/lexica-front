@@ -18,6 +18,7 @@
 /* FONTS LOAD SECTION */
 
 @font-face { src: url("../fonts/roboto-regular-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 400; font-style: normal; }
+@font-face { src: url("../fonts/CabinetGrotesk-Variable.woff2") format("woff2"); font-family: "cabinet"; font-style: normal; }
 @font-face { src: url("../fonts/roboto-italic-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 400; font-style: italic; }
 @font-face { src: url("../fonts/roboto-bold-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 700; font-style: normal; }
 @font-face { src: url("../fonts/roboto-bolditalic-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 700; font-style: italic; }
@@ -41,6 +42,48 @@ body {
 }
 
 /* USER STYLES */
+
+.title {
+	font-family: 'cabinet', 'sans-serif';
+}
+
+.sub-title {
+	font-family: "Inter", sans-serif;
+}
+
+.guides_bookRotateWrapper__Z22Ip.⭐️dyr9ko-0 {
+	cursor: pointer;
+	--book-depth: 56px;
+	--book-border-radius: 5.4px 1.8px 1.8px 5.4px;
+	--hover-rotate: -20deg;
+	--hover-scale: 1.066;
+	--hover-translate-x: -0.5em;
+	transform: rotate(0deg);
+	position: relative;
+	transform-style: preserve-3d;
+	width: 204px;
+	height: 220px;
+	transition: transform .6s ease;
+	box-shadow: none;
+}
+
+.guides_book__j9vP8.⭐️dyr9ko-0 {
+	width: var(--book-width);
+	height: var(--book-height);
+	min-width: var(--book-width);
+	min-height: var(--book-height);
+	border-radius: var(--book-border-radius);
+	background: linear-gradient(180deg, hsla(0, 0%, 100%, .1) 0, hsla(0, 0%, 100%, 0) 50%, hsla(0, 0%, 100%, 0) 100%), var(--book-color);
+	box-shadow: 0 1.8px 3.6px rgba(0, 0, 0, .05), 0 10.8px 21.6px rgba(0, 0, 0, .08), inset 0 -.9px 0 rgba(0, 0, 0, .1), inset 0 1.8px 1.8px hsla(0, 0%, 100%, .1), inset 3.6px 0 3.6px rgba(0, 0, 0, .1);
+	display: flex;
+}
+
+
+@media (max-width: 768px) {
+	.newsletter-bg {
+		background-image: none !important;
+	}
+}
 
 .image {
 	max-width: 100%;
