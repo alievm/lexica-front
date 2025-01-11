@@ -33,7 +33,7 @@
     <span class="mr-2 w-8">
       <img src="/images/JOJj79gp_Djhwdp_ZOKLL.png" alt="" />
     </span>
-		Lexica
+		Lexica  
 	</a>
 	<input type="checkbox" class="peer hidden" id="navbar-open" />
 	<label class="absolute top-5 right-5 cursor-pointer lg:hidden" for="navbar-open">
@@ -44,9 +44,9 @@
 	<nav aria-label="Header Navigation" class="peer-checked:pt-8 peer-checked:max-h-96 flex max-h-0 w-full flex-col items-center overflow-hidden transition-all lg:ml-24 lg:max-h-full lg:flex-row">
 		<ul class="flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0">
 			<li class="lg:mr-12"><a class="rounded hover:text-blue-600 sub-title font-medium text-md text-blue-600 transition " href="index.html">Home Page</a></li>
-			<li class="lg:mr-12"><a class="rounded hover:text-blue-600 sub-title font-medium text-md text-gray-700 transition " href="#">About Us </a></li>
+			<li class="lg:mr-12"><a class="rounded hover:text-blue-600 sub-title font-medium text-md text-gray-700 transition " href="about-us.html">About Us </a></li>
 			<li class="lg:mr-12"><a class="rounded hover:text-blue-600 sub-title font-medium text-md text-gray-700 transition " href="#">Services</a></li>
-			<li class="lg:mr-12"><a class="rounded hover:text-blue-600 sub-title font-medium text-md text-gray-700 transition " href="#">Testimonials </a></li>
+<!--			<li class="lg:mr-12"><a class="rounded hover:text-blue-600 sub-title font-medium text-md text-gray-700 transition " href="#">Testimonials </a></li>-->
 			<li class="lg:mr-12"><a class="rounded hover:text-blue-600 sub-title font-medium text-md text-gray-700 transition " href="contact-us.html">Contact Us  </a></li>
 		</ul>
 		<hr class="mt-4 w-full lg:hidden" />
@@ -66,11 +66,11 @@
 			<a href="https://qwik.dev" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Lexica</a>
 			– Your Trusted Translation & Interpretation Partner
 		</h1>
-		<div class="max-w-7xl text-center text-xl text-[#64748b] md:mb-16 sub-title sub-title2">
+		<div class="max-w-7xl text-center text-xl text-[#64748b] md:mb-6 sub-title sub-title2">
 			At Lexica, we specialize in breaking down language barriers to ensure seamless communication across cultures. Based in Forest Hills, NY, we provide professional translation and interpretation services to businesses, legal professionals, healthcare providers, and individuals. Our certified experts are committed to delivering precise, high-quality language solutions tailored to your needs.
 		</div>
-		<img class="h-[300px] img" src="images/Design.svg">
-		<div class="mt-5 z-10 flex items-center mx-auto gap-4 jusify-center 0" q:key="AC_4" q:id="1y">
+		<img class="h-[400px] img" src="./images/9797a490-0ab6-44f2-be35-99d2f6a760c1.png">
+		<div class="mt-5 z-30 flex items-center mx-auto gap-4 justify-center 0" q:key="AC_4" q:id="1y">
 			<!--qv q:id=1z q:key=8gdL:AC_3-->
 			<a href="#" title="" class="whitespace-nowrap flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 hover:bg-blue-600">
 <!--				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">-->
@@ -391,21 +391,19 @@
 		// Add a stagger effect to each word in the title
 		tl.from(".title1 a", {
 			opacity: 0,
-			scale: 0.5,        // Start smaller for a more dramatic entrance
-			rotation: -10,     // Adds a slight rotation for dynamic effect
-			filter: "blur(10px)",  // Start with a blur effect
-			duration: 1.3,     // Increased duration for a smoother transition
-			ease: "elastic.out(1, 0.75)",  // Elastic easing for a bouncy effect
-			onStart: function() {
-				// Custom animation using GSAP's properties
+			scale: 0.5,
+			rotation: -10,
+			filter: "blur(10px)",
+			duration: 1.3,
+			ease: "elastic.out(1, 0.75)",
+			onStart: function () {
 				gsap.to(".title1 a", {
-					filter: "blur(0px)",  // Animates blur back to normal
-					duration: 0.7,        // Halfway through the entrance duration
-					ease: "power2.out"    // Smooth easing to bring focus to text
+					filter: "blur(0px)",
+					duration: 0.7,
+					ease: "power2.out"
 				});
 			}
 		}, "-=0.9");
-
 
 		// Animate the subtitle with a fade-in and upward slide effect
 		tl.from(".sub-title2", {
@@ -414,7 +412,26 @@
 			scale: 0.95,
 			ease: "power3.out",
 			duration: 1.1
-		}, "-=0.7"); // Overlapping animation for smoother experience
+		}, "-=0.7");
+
+		// Super nice levitating effect for the image
+		gsap.to(".img", {
+			y: -15,                  // Move image upward slightly
+			duration: 2,             // Smooth duration for levitation
+			yoyo: true,              // Return back to original position
+			repeat: -1,              // Infinite repetition
+			ease: "power1.inOut"     // Smooth easing for up and down movement
+		});
+
+		// Add a subtle floating effect using rotation and scale
+		gsap.to(".img", {
+			rotation: 1,             // Slight rotation for a natural floating feel
+			scale: 1.02,             // Slightly scale up for a breathing effect
+			duration: 3,
+			yoyo: true,
+			repeat: -1,
+			ease: "sine.inOut"       // Smooth sine wave easing
+		});
 	});
 </script>
 </body>
